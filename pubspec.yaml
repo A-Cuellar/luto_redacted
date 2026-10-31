@@ -1,0 +1,54 @@
+name: luto_redacted
+description: Selective black-bar redaction for sensitive data. Hide money, IBAN and texts in app switcher with luto (mourning) effect. Privacy alternative to screen_protector and privacy_lens.
+version: 0.1.0
+homepage: https://github.com/A-Cuellar/luto_redacted
+repository: https://github.com/A-Cuellar/luto_redacted
+issue_tracker: https://github.com/A-Cuellar/luto_redacted/issues
+documentation: https://github.com/A-Cuellar/luto_redacted#readme
+
+topics:
+  - privacy
+  - redacted
+  - sensitive
+  - security
+  - money
+  - blackout
+  - luto
+
+ 
+screenshots:
+  - description: App without luto - all data visible
+    path: screenshots/visible.png
+  - description: Blur luto style
+    path: screenshots/blur.png
+  - description: Default blackBar redaction
+    path: screenshots/blackbar.png
+  - description: Noise and shredded styles
+    path: screenshots/noise.png
+  - description: Shredded document effect
+    path: screenshots/shredded.png
+  - description: Cubism colorful mosaic
+    path: screenshots/cubism.png
+  - description: Masked IBAN and Phone
+    path: screenshots/masked.png
+
+
+environment:
+  sdk: ^3.12.0
+  flutter: ">=3.44.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.armando.luto
+        pluginClass: LutoRedactedPlugin
