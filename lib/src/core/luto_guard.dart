@@ -109,7 +109,7 @@ class _LutoGuardState extends State<LutoGuard> with WidgetsBindingObserver {
         state == AppLifecycleState.hidden ||
         state == AppLifecycleState.paused) {
       if (widget.mode == LutoMode.selective) {
-        _controller.show();
+        _controller.reveal();
       }
       if (widget.mode == LutoMode.secure) {
         LutoSecure.enable();
@@ -126,7 +126,7 @@ class _LutoGuardState extends State<LutoGuard> with WidgetsBindingObserver {
         Future.delayed(widget.revealDelayOnResume, () {
           if (mounted) {
             //LutoSecure.disable();
-            _controller.hide();
+            _controller.obscure();
           }
         });
       }

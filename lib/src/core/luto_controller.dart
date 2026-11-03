@@ -45,12 +45,12 @@ class LutoController extends ValueNotifier<bool> {
   /// Show the sensitive data (sets [isObscured] to false).
   ///
   /// Does nothing if already obscured, to avoid unnecessary rebuilds.
-  void show() {
+  void reveal() {
     if (!value) value = true;
   }
 
   /// Hide the sensitive data (sets [isObscured] to true).
-  void hide() {
+  void obscure() {
     if (value) value = false;
   }
 

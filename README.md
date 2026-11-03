@@ -141,9 +141,9 @@ ValueNotifier<bool> to share across many widgets.
 
 ```dart
 final controller = LutoController(mode: LutoMode.selective);
-controller.show();   // obscures data (isObscured = true)
-controller.hide();   // reveals data (isObscured = false)
-controller.toggle(); // toggles between obscured and visible
+controller.obscure();   // obscures data (isObscured = true)
+controller.reveal();    // reveals data (isObscured = false)
+controller.toggle();    // toggles between obscured and visible
 controller.isObscured
 controller.isSelectiveMode
 controller.isSecureMode

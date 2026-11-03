@@ -115,9 +115,9 @@ class _BankDashboardState extends State<BankDashboard> {
                           return IconButton(
                             onPressed: () {
                               if (isVisible) {
-                                controller.hide(); // tap
+                                controller.obscure(); // tap
                               } else {
-                                controller.show();
+                                controller.reveal();
                               }
                             },
                             icon: Icon(

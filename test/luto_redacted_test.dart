@@ -14,7 +14,7 @@ void main() {
       final controller = LutoController(mode: LutoMode.selective);
       var notified = false;
       controller.addListener(() => notified = true);
-      controller.show();
+      controller.reveal();
       expect(controller.isObscured, true);
       expect(controller.value, true);
       expect(notified, true);
@@ -22,8 +22,8 @@ void main() {
 
     test('hide() vuelve a false', () {
       final controller = LutoController(mode: LutoMode.selective);
-      controller.show();
-      controller.hide();
+      controller.reveal();
+      controller.obscure();
       expect(controller.isObscured, false);
     });
 
@@ -64,10 +64,10 @@ void main() {
         ),
       );
       expect(controller.isObscured, false);
-      controller.show();
+      controller.reveal();
       await tester.pump();
       expect(controller.isObscured, true);
-      controller.hide();
+      controller.obscure();
       await tester.pump();
       expect(controller.isObscured, false);
     });
@@ -87,7 +87,7 @@ void main() {
 
     testWidgets('muestra barra negra cuando está obscurecido', (tester) async {
       final controller = LutoController(mode: LutoMode.selective);
-      controller.show();
+      controller.reveal();
       await tester.pumpWidget(
         MaterialApp(
           home: LutoGuard(
