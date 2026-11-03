@@ -12,8 +12,8 @@ import 'package:luto_redacted/luto_redacted.dart';
 /// Example:
 /// ```dart
 /// final controller = LutoController();
-/// controller.show(); // hide data
-/// controller.hide(); // show data
+/// controller.obscure(); // hide data
+/// controller.reveal(); // show data
 /// ```
 class LutoController extends ValueNotifier<bool> {
   /// Creates a controller that starts as visible (not obscured).
