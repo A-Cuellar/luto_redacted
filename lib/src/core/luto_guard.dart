@@ -21,7 +21,7 @@ import 'luto_secure.dart';
 /// Example:
 /// ```dart
 /// LutoGuard(
-///   mode: LutoMode.both,
+///   mode: LutoMode.selective,
 ///   style: LutoStyle.blackBar,
 ///   child: MyApp(),
 /// )
